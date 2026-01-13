@@ -21,9 +21,9 @@
     <form id="verifyer">
       <div class="mx-5 d-inline-block text-center">
         <p class="mt-4 mb-1" for="km">Numero Chilometri</p>
-        <input type="text" name="km-counter" />
+        <input type="text" name="km-counter" id="km-counter" />
       </div>
-      <select name="age" id="age-finder" class="">
+      <select name="age" id="age-finder">
         <option value="">Seleziona</option>
         <option value="over-65">over 65</option>
         <option value="underage">minorenne</option>
@@ -32,6 +32,9 @@
         <input type="submit" value="Invia" class="mt-4 ms-5 px-4" />
       </div>
     </form>
+    <div>
+      <p id="km-price"></p>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
