@@ -8,15 +8,30 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
     <title>Document</title>
   </head>
   <body>
-    <input type="text" />
-    <select name="age" id="age-finder">
-      <option value="">Seleziona</option>
-      <option value="over-65">over 65</option>
-      <option value="underage">minorenne</option>
-    </select>
+    <form id="verifyer">
+      <div class="mx-5 d-inline-block text-center">
+        <label for="km">Numero Chilometri </label><br />
+        <input type="text" name="km-counter" />
+      </div>
+      <select name="age" id="age-finder" class="">
+        <option value="">Seleziona</option>
+        <option value="over-65">over 65</option>
+        <option value="underage">minorenne</option>
+      </select>
+      <div>
+        <input type="submit" value="Invia" class="mt-4 ms-5 px-4" />
+      </div>
+    </form>
     <script src="./js/main.js"></script>
   </body>
 </html>
