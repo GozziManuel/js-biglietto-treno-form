@@ -11,18 +11,23 @@ formVerifyer.addEventListener("submit", function (e) {
   let userKm = kmCounter.value;
   let kmPrice = userKm * 0.21;
   console.log(kmPrice);
-  //   if sales
-  if (ageFinder.value === "over-65") {
-    kmPrice = kmPrice - (kmPrice * 40) / 100;
-    let kmPriceDecimal = kmPrice.toFixed(2);
-    kmVisible.innerText = kmPriceDecimal;
-  } else if (ageFinder.value === "underage") {
-    kmPrice = kmPrice - (kmPrice * 20) / 100;
-    let kmPriceDecimal = kmPrice.toFixed(2);
-    kmVisible.innerText = kmPriceDecimal;
-    // normal price
+  if (isNaN(userKm) == true) {
+    announcer.innerText = "";
+    kmVisible.innerText = "Inserire numero valido";
   } else {
-    announcer.innerText = "Il prezzo è ";
-    kmVisible.innerText = kmPrice;
+    //   if sales
+    if (ageFinder.value === "over-65") {
+      kmPrice = kmPrice - (kmPrice * 40) / 100;
+      let kmPriceDecimal = kmPrice.toFixed(2);
+      kmVisible.innerText = kmPriceDecimal;
+    } else if (ageFinder.value === "underage") {
+      kmPrice = kmPrice - (kmPrice * 20) / 100;
+      let kmPriceDecimal = kmPrice.toFixed(2);
+      kmVisible.innerText = kmPriceDecimal;
+      // normal price
+    } else {
+      announcer.innerText = "Il prezzo è ";
+      kmVisible.innerText = kmPrice;
+    }
   }
 });
