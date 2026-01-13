@@ -12,3 +12,6 @@ img {
 ul {
   list-style-type: none;
 }
+.containerticket {
+  max-width: 200px;
+}
